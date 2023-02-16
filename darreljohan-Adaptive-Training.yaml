@@ -1,0 +1,24 @@
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://k8s.adaptivenetworklab.org/api/endpoints/1/kubernetes
+  name: portainer-cluster-Adaptive-Training
+contexts:
+- context:
+    cluster: portainer-cluster-Adaptive-Training
+    namespace: training
+    user: portainer-sa-user-0332ff83-be60-48eb-a30e-ea86bb000a4e-4
+  name: adaptive-training
+- context:
+    cluster: portainer-cluster-Adaptive-Training
+    namespace: darrel-training
+    user: portainer-sa-user-0332ff83-be60-48eb-a30e-ea86bb000a4e-4
+  name: darrel-training
+current-context: darrel-training
+kind: Config
+preferences: {}
+users:
+- name: portainer-sa-user-0332ff83-be60-48eb-a30e-ea86bb000a4e-4
+  user:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJkYXJyZWxqb2hhbiIsInJvbGUiOjIsInNjb3BlIjoia3ViZWNvbmZpZyIsImZvcmNlQ2hhbmdlUGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE2NzU5MjE1ODB9.rPzDHmqMfQ1GcikT2IEix094mBv_irdWBA0SAc7buGc
